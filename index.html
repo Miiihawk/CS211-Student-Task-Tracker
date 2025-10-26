@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Task Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1> Student Task Tracker</h1>
+
+    <!-- Task Form -->
+    <form id="task-form">
+      <input
+        type="text"
+        id="assignment"
+        placeholder="Assignment Title"
+        required
+      />
+      <input type="date" id="dueDate" required />
+      <input type="text" id="class" placeholder="Class" />
+      <select id="type">
+        <option value="Reading">Reading</option>
+        <option value="Essay">Essay</option>
+        <option value="Project">Project</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Filter / Sort controls -->
+    <div
+      class="controls"
+      style="
+        max-width: 1100px;
+        margin: 0 auto 12px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      "
+    >
+      <label for="filter-due" class="text-muted" style="font-weight: 600"
+        >Filter:</label
+      >
+      <select id="filter-due">
+        <option value="all">All</option>
+        <option value="overdue">Overdue</option>
+        <option value="today">Today</option>
+        <option value="upcoming">Upcoming</option>
+      </select>
+
+      <label
+        for="sort-due"
+        class="text-muted"
+        style="font-weight: 600; margin-left: 12px"
+        >Sort:</label
+      >
+      <select id="sort-due">
+        <option value="none">None</option>
+        <option value="asc">Due Date ↑</option>
+        <option value="desc">Due Date ↓</option>
+      </select>
+
+      <button
+        type="button"
+        id="clear-filters"
+        style="
+          margin-left: 12px;
+          padding: 6px 10px;
+          border-radius: 8px;
+          border: none;
+          background: #eee;
+          cursor: pointer;
+        "
+      >
+        Clear
+      </button>
+    </div>
+
+    <!-- Task Table -->
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Assignment</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Class</th>
+            <th>Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="task-table"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
