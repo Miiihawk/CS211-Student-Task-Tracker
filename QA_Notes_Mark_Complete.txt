@@ -1,0 +1,66 @@
+QA Notes – Mark as Complete Feature
+
+Feature Tested:
+Mark as Complete / Pending Functionality
+
+Tester:
+Maria Kathleen “Ethari” Engalla
+
+Date Tested:
+October 25, 2025
+
+Objective:
+To verify that the Mark as Complete feature accurately updates a task’s status and visually distinguishes completed tasks from pending ones.
+
+Bugs Found:
+
+Bug ID: MARK-01
+Description: Marked tasks do not retain their completion status after a page refresh.
+Steps to Reproduce:
+1. Mark one or more tasks as complete.
+2. Refresh the page.
+Expected Result: Task completion status should remain saved after reload.
+Actual Result: All tasks revert to “Pending” after refresh.
+Severity: High
+Status: Fixed
+
+Bug ID: MARK-02
+Description: Checkbox toggle occasionally unresponsive after rapid clicking.
+Steps to Reproduce:
+1. Click the “Mark Complete” checkbox repeatedly on a single task.
+Expected Result: Checkbox toggles reliably each time.
+Actual Result: Checkbox freezes and becomes unresponsive temporarily.
+Severity: Medium
+Status: Fixed
+
+Bug ID: MARK-03
+Description: Completed tasks do not visually differ enough from pending ones.
+Steps to Reproduce:
+1. Mark a task as complete.
+Expected Result: Completed tasks should display distinct styling (e.g., faded text or green checkmark).
+Actual Result: Minimal visual difference causes confusion between statuses.
+Severity: Low
+Status: Fixed (UI color enhancement added)
+
+Bug ID: MARK-04
+Description: Toggling completion status resets edited task details.
+Steps to Reproduce:
+1. Edit a task.
+2. Immediately mark it as complete.
+Expected Result: Task should retain the updated details and change status.
+Actual Result: Edits revert to the old version.
+Severity: Medium
+Status: Fixed
+
+Bug ID: MARK-05
+Description: Task marked complete while being deleted causes console error.
+Steps to Reproduce:
+1. Mark a task as complete.
+2. Immediately delete the same task.
+Expected Result: Task should be removed without errors.
+Actual Result: Console logs “undefined property” error before deletion completes.
+Severity: Low
+Status: Fixed
+
+Overall QA Summary:
+The Mark as Complete functionality performs reliably after fixes were implemented. User interaction is smooth, and no data loss occurs when toggling between statuses. All reported bugs have been addressed and verified.
