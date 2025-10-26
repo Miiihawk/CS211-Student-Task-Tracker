@@ -1,0 +1,20 @@
+Developer Log - delete-edit Branch
+----------------------------------------
+Project: Student Task Tracker
+Role: Dev1 - Alliza Anne Caberte
+Date: October 26, 2025
+
+Commit 1:
+Set up delete-edit branch and added notes file.
+Reviewed Edit and Delete task features for functionality and UI alignment.
+
+Commit 2:
+Refined Edit/Delete functions and adjusted minor UI spacing.
+Verified that task updates reflect properly on the dashboard.
+
+Commit 3:
+Finalized documentation and confirmed QA test results.
+All Edit/Delete features meet acceptance criteria and sprint goal.
+
+----------------------------------------
+End of Log (skibidi)
