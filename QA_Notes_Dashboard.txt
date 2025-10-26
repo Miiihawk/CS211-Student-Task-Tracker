@@ -1,0 +1,67 @@
+QA Notes – Dashboard Feature
+
+Feature Tested:
+Dashboard (Task Overview and Display)
+
+Tester:
+Maria Kathleen “Ethari” Engalla
+
+Date Tested:
+October 25, 2025
+
+Objective:
+To verify that the Dashboard accurately displays all tasks, reflects real-time updates, and maintains proper sorting, formatting, and data persistence.
+
+Bugs Found:
+
+Bug ID: DASH-01
+Description: Newly added task does not appear immediately on the dashboard until the page is refreshed.
+Steps to Reproduce:
+1. Add a new task using the form.
+2. Observe the dashboard without refreshing.
+Expected Result: New task should appear instantly after clicking “Add.”
+Actual Result: Task appears only after manual page refresh.
+Severity: Medium
+Status: Fixed
+
+Bug ID: DASH-02
+Description: Dashboard sorting by due date does not update after editing a task’s date.
+Steps to Reproduce:
+1. Edit a task and change its due date.
+2. Observe task order.
+Expected Result: Tasks should automatically reorder based on updated due dates.
+Actual Result: Sorting remains unchanged until refresh.
+Severity: Low
+Status: Fixed
+
+Bug ID: DASH-03
+Description: Inconsistent spacing between task rows when more than five tasks are displayed.
+Steps to Reproduce:
+1. Add six or more tasks.
+2. Scroll through the dashboard.
+Expected Result: Task rows should have equal spacing.
+Actual Result: Uneven spacing occurs after multiple additions.
+Severity: Low
+Status: Fixed
+
+Bug ID: DASH-04
+Description: Task completion status not reflected after page reload.
+Steps to Reproduce:
+1. Mark a task as complete.
+2. Refresh the page.
+Expected Result: Completed status should remain saved.
+Actual Result: Checkbox resets and task reverts to “Pending.”
+Severity: High
+Status: Fixed
+
+Bug ID: DASH-05
+Description: Duplicate entries appear when “Add Task” is clicked rapidly.
+Steps to Reproduce:
+1. Click the “Add Task” button multiple times quickly.
+Expected Result: Only one task should be added.
+Actual Result: Multiple duplicate entries are created.
+Severity: Medium
+Status: Fixed
+
+Overall QA Summary:
+The Dashboard displays all tasks accurately and updates dynamically after fixes were implemented. All major bugs were resolved during the second round of testing. Data persistence using localStorage now works properly, ensuring that completed tasks and new entries remain visible after page reloads. Minor UI spacing issues were fixed through CSS adjustments.

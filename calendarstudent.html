@@ -1,0 +1,76 @@
+<!--Scrum Master's Notes-->
+<!--======================-->
+<!--Reminder: Ensure that the layout and elements meet the acceptance
+    criteria that is provided in the document-->
+
+<!-- Note that the UI includes all required components:
+    - Add Task form (title, due date, class, type)
+    - Dashboard table displaying tasks
+    - Filter and Sort controls for task organization -->
+
+<!-- Communicate with:
+    - Dev1 (Caberte) for UI layout and styling updates
+    - Dev2 (Perdido) for functionality integration
+    - QA/Tester (Engalla) to validate correct display and responsiveness -->
+
+<!-- If issues arise (missing assets, broken layout, merge conflicts, etc.),
+    contact the Scrum Master (Andam) immediately for assistance. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Calendar | Student Task Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2 class="logo">📘 Tasks</h2>
+        <nav>
+          <ul>
+            <li><a href="index.html">🏠 Dashboard</a></li>
+            <li><a href="index.html">📝 My Tasks</a></li>
+            <li><a href="calendar.html" class="active">📅 Calendar</a></li>
+            <li><a href="#">⚙️ Settings</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1>📅 Task Calendar</h1>
+
+        <div class="calendar-controls">
+          <button id="prevMonth">← Prev</button>
+          <h2 id="monthYear"></h2>
+          <button id="nextMonth">Next →</button>
+        </div>
+
+        <div class="calendar">
+          <div class="calendar-header">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div id="calendar-days" class="calendar-days"></div>
+        </div>
+
+        <!-- Task popup -->
+        <div id="task-popup" class="task-popup hidden">
+          <h3 id="popup-date"></h3>
+          <ul id="popup-tasks"></ul>
+        </div>
+      </main>
+    </div>
+
+    <script src="calendar.js"></script>
+  </body>
+</html>
