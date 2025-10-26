@@ -1,3 +1,21 @@
+// Scrum Master's Notes
+//================================
+// Reminder: Ensure this feature (Task Filtering & Sorting)
+// Meets the acceptance criteria in the sprint backlog (Refer to the document provided).
+
+//Remind Devs to update commit messages with
+// detailed descriptions (e.g., "Added sorting logic for tasks by due date")
+// to improve traceability as discussed in the Sprint Retrospective.
+
+
+// Coordinate with QA/Tester (Engalla) to confirm that
+// filtering and sorting functions display accurate results
+// and persist correctly via localStorage.
+
+// If any other issues are experienced(Lost access to the repository, commits not reflecting changes, etc.)
+// Contact the SM (Andam) immediately for resolution.
+
+
 // ======== Select DOM Elements ========
 const taskForm = document.getElementById("task-form");
 const taskTable = document.getElementById("task-table");
