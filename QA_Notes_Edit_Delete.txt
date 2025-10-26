@@ -1,0 +1,58 @@
+QA Notes – Edit and Delete Task Features
+
+Feature Tested:
+Edit Task and Delete Task Functions
+
+Tester:
+Maria Kathleen “Ethari” Engalla
+
+Date Tested:
+October 25, 2025
+
+Objective:
+To verify that the Edit and Delete functionalities work properly, allowing users to update or remove existing tasks with real-time dashboard updates and proper data persistence.
+
+Bugs Found:
+
+Bug ID: EDIT-01
+Description: Edited task details do not update immediately on the dashboard.
+Steps to Reproduce:
+1. Edit an existing task and change its title or due date.
+2. Observe the dashboard without refreshing.
+Expected Result: The updated task details should appear immediately.
+Actual Result: Old task details remain until manual refresh.
+Severity: Medium
+Status: Fixed
+
+Bug ID: EDIT-02
+Description: Editing a completed task resets its status to “Pending.”
+Steps to Reproduce:
+1. Mark a task as complete.
+2. Edit its details.
+Expected Result: The task should remain “Complete” after editing.
+Actual Result: The task status reverts to “Pending.”
+Severity: Medium
+Status: Fixed
+
+Bug ID: DEL-01
+Description: Deleting a task sometimes removes the wrong item when multiple tasks share the same title.
+Steps to Reproduce:
+1. Add two tasks with identical titles.
+2. Delete one of them.
+Expected Result: Only the selected task should be deleted.
+Actual Result: Both tasks are deleted.
+Severity: High
+Status: Fixed
+
+Bug ID: EDIT-03
+Description: Input fields occasionally lose focus when editing long task descriptions.
+Steps to Reproduce:
+1. Edit a task with a long description.
+2. Type continuously for more than 10 seconds.
+Expected Result: Input field remains active until user clicks away.
+Actual Result: Input field loses focus unexpectedly.
+Severity: Low
+Status: Fixed
+
+Overall QA Summary:
+The Edit and Delete functionalities now operate correctly after adjustments. Edited tasks update immediately, and deletions are accurately reflected in real time. Testing confirmed that no duplicate deletions or unexpected resets occur after fixes.
